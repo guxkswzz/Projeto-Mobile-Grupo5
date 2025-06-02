@@ -1,0 +1,217 @@
+<!-- pagina do diego: tela de login -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Rick and Morty API</title>
+  <link rel="icon" href="assets/imagens/favicon.ico.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      position: relative;
+      z-index: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/imagens/rick-and-morty.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(30, 30, 30, 0.9);
+      width: 100%;
+    }
+
+    .titulo-login {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .login-box {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .obrigatorio-texto {
+      color: #ccc;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    label {
+      color: #fff;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      display: block;
+      text-align: left;
+    }
+
+    input {
+      width: 90%;
+      padding: 11px;
+      border-radius: 5px;
+      border: none;
+      margin: 0 auto 10px;
+      color: #000;
+      background-color: #f0f0f0;
+      display: block;
+    }
+
+    button {
+      background-color: #00cc66;
+      padding: 13px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+      width: 65%;
+      margin: 10px auto 0;
+      border: none;
+      transition: background-color 0.2s ease;
+      display: block;
+    }
+
+    button:active {
+      background-color: #00994d;
+    }
+
+    .info-text {
+      color: #ccc;
+      margin-top: 15px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .alt-button {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      width: 95%;
+    }
+
+    .alt-button:active {
+      background-color: #ddd;
+    }
+
+    .alt-button img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .alt-button span {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .footer-text {
+      color: #ccc;
+      margin-top: 15px;
+      font-size: 25px;
+      text-align: center;
+    }
+
+    footer.rodape {
+      background-color: #898989;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .rodape-texto {
+      color: #fff;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .mensagem-erro {
+      color: red;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="titulo-login">CONECTE-SE PARA ENTRAR:</div>
+
+    <div class="login-box">
+      <form action="#" method="POST" aria-label="Formulário de login">
+        <p class="obrigatorio-texto"><span style="color: red;">*</span>campo obrigatório</p>
+
+        <label for="email">*Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="nome.exemplo@gmail.com" required />
+
+        <label for="senha">*Senha</label>
+        <input type="password" id="senha" name="senha" autocomplete="current-password" placeholder="insira a sua senha" required />
+
+        <div class="mensagem-erro" id="erro-login">Email ou senha inválidos.</div>
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p class="info-text">
+        Caso já tenha uma conta, faça login em uma das outras duas plataformas abaixo.
+      </p>
+
+      <button class="alt-button" type="button">
+        <img src="assets/imagens/logo-google.png" alt="Logo Google">
+        <span>Continuar com o Google</span>
+      </button>
+
+      <button class="alt-button" type="button">
+        <img src="assets/imagens/logo-github.png" alt="Logo GitHub">
+        <span>Continuar com o GitHub</span>
+      </button>
+    </div>
+
+    <p class="footer-text">Rick and Morty API</p>
+  </main>
+
+  <footer class="rodape">
+    <p class="rodape-texto">
+      Descubra seus personagens favoritos da série Rick And Morty, comente sobre eles, adicione aos favoritos e veja o check-up de cada um!
+    </p>
+  </footer>
+
+</body>
+</html>
+
