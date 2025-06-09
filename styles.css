@@ -7,46 +7,64 @@ body {
 }
 
 .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 10px;
-    height: 100vh;
-    background-color: #00ff00;
-    color: white;
-    overflow: hidden;
-    transition: width 0.3s ease-in-out;
-    padding: 10px;
-  }
-  
-  .sidebar:hover {
-    width: 100px;
-  }
-  
-  .sidebar p, .sidebar ul {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  }
-  
-  .sidebar:hover p, .sidebar:hover ul {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .sidebar ul li:hover {
-    background-color: #01cc01c4;
-  }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 100vh;
+  background-color: #00ff00;
+  color: white;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar:hover {
+  width: 200px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.sidebar:hover button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar button:hover {
+  background-color: #01cc01c4;
+}
+
+.sidebar-image {
+  width: 100%;
+  height: 60%;
+  margin-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.sidebar:hover .sidebar-image {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 
 .main-content {
     flex-grow: 1;
@@ -114,4 +132,56 @@ p {
     color: white;
     font-size: 2rem;
     align-self: center;
+}
+
+.character-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.nav-character-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@keyframes slideInRight {
+  from {
+      transform: translateX(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.nav-arrow-prev, .nav-arrow-next {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-arrow-prev:hover {
+  transform: translateX(-5px);
+}
+
+.nav-arrow-next:hover {
+  transform: translateX(5px);
 }
