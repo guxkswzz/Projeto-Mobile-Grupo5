@@ -1,56 +1,32 @@
-body {
-  background-color: #121212;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+const btnSim = document.getElementById('btnSim');
+const btnNao = document.getElementById('btnNao');
+const conteudo = document.getElementById('conteudo');
 
-.container {
-  text-align: center;
-  background-color: #2e2e3e;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-}
+btnSim.addEventListener('click', async () => {
+  conteudo.innerHTML = '<p>Carregando personagem...</p>';
 
-h1 {
-  margin-bottom: 20px;
-}
+  const totalPersonagens = 826;
+  const idAleatorio = Math.floor(Math.random() * totalPersonagens) + 1;
 
-.btn {
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+  try {
+    const resposta = await fetch(`https://rickandmortyapi.com/api/character/${idAleatorio}`);
+    const personagem = await resposta.json();
 
-.btn-sim {
-  background-color: #4CAF50;
-  color: white;
-}
+    conteudo.innerHTML = `
+      <div class="card">
+        <img src="${personagem.image}" alt="${personagem.name}" />
+        <h2>${personagem.name}</h2>
+        <p>Status: ${personagem.status}</p>
+        <p>Espécie: ${personagem.species}</p>
+        <p>Origem: ${personagem.origin.name}</p>
+      </div>
+    `;
+  } catch (erro) {
+    conteudo.innerHTML = '<p>Erro ao carregar personagem.</p>';
+    console.error(erro);
+  }
+});
 
-.btn-nao {
-  background-color: #f44336;
-  color: white;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
-.card img {
-  width: 200px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.card h2, .card p {
-  margin: 5px 0;
-}
+btnNao.addEventListener('click', () => {
+  alert('Você escolheu ficar no portal!');
+});
