@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nós</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <img src="pages/page4/titulo.png" alt="titulo">
+    <H1>Conheça as pessoas por trás do nosso trabalho</H1>
+    <section>
+
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Gustavo">
+            <div>
+                <h2>Gustavo Ananias</h2>
+                <p>Gustavo é responsável pela construção das bases do codigo dos nossos projetos e/ou codigo.</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Davi">
+            <div>
+                <h2>Davi Ribeiro</h2>
+                <p>Davi é responsavel pela comunicação, um exemplo é a pagina de contato onde pode ser encontrado o
+                    contato de cada um dos membros da equipe, para que o usuario possa se comunicar com algum
+                    administrador do projeto.</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Diego">
+            <div>
+                <h2>Diego </h2>
+                <p>Diego é responsavel pelo login e a criação do rascunho do projeto, onde ele organiza as ideias e apresenta para a equipe.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Ashly">
+            <div>
+                <h2>Ashly Arcia</h2>
+                <p>Ashly é encarregada de que o usuario possa saber as informaçoes importantes de cada membro da equipe.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Anna">
+            <div>
+                <h2>Anna Helloiza</h2>
+                <p>Anna se encarrega de fazer uma boa depedida, completando todos os pontos importantes
+                    do nosso projeto, para que o usuario possa ter uma experiencia agradevel.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    display: flex;  
+    justify-content: center;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 100vh;
+  background-color: #00ff00;
+  color: white;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar:hover {
+  width: 200px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.sidebar:hover button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar button:hover {
+  background-color: #01cc01c4;
+}
+
+.sidebar-image {
+  width: 100%;
+  height: 60%;
+  margin-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.sidebar:hover .sidebar-image {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+h1 {
+    color: #00ff00;
+    font-size: 2rem;
+}
+
+.info-box {
+    background-color: #4b0082; 
+    border-radius: 30px;
+    padding: 20px;
+    width: 300px; 
+    height: 300px; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+    justify-content: center; 
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #4b0082; 
+    border-radius: 50%;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav-button {
+    width: 100px;
+    height: 100px;
+    background-color: #4b0082; 
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+
+.character-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.nav-character-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@keyframes slideInRight {
+  from {
+      transform: translateX(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.nav-arrow-prev, .nav-arrow-next {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+  align-self: center;
+}
+
+.nav-arrow-prev:hover {
+  transform: translateX(-5px);
+}
+
+.nav-arrow-nextZ:hover {
+  transform: translateX(5px);
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 50px;
+  }
+
+  .sidebar:hover {
+    width: 160px;
+  }
+
+  .sidebar button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .sidebar-image {
+    height: 40%;
+  }
+
+  .info-box {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav-button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .voltar, .ir {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    width: 40px;
+  }
+
+  .sidebar:hover {
+    width: 140px;
+  }
+
+  .sidebar button {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .info-box {
+    width: 95%;
+    padding: 8px;
+  }
+
+  .nav-button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .voltar, .ir {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
