@@ -74,3 +74,68 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchCharacter(currentCharacterId);
     updateNavButtons(currentCharacterId);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("species-container");
+  
+    async function fetchAllCharacters() {
+      let allCharacters = [];
+      let url = "https://rickandmortyapi.com/api/character";
+  
+      while (url) {
+        const res = await fetch(url);
+        const data = await res.json();
+        allCharacters = allCharacters.concat(data.results);
+        url = data.info.next;
+      }
+  
+      return allCharacters;
+    }
+  
+    function groupBySpecies(characters) {
+      const speciesGroups = {};
+  
+      characters.forEach(character => {
+        const species = character.species || "Desconhecido";
+        if (!speciesGroups[species]) {
+          speciesGroups[species] = [];
+        }
+        speciesGroups[species].push(character);
+      });
+  
+      return speciesGroups;
+    }
+  
+    function renderSpeciesGroups(groups) {
+      for (const species in groups) {
+        const groupDiv = document.createElement("div");
+        groupDiv.classList.add("species-group");
+  
+        const title = document.createElement("h2");
+        title.textContent = species;
+        groupDiv.appendChild(title);
+  
+        const list = document.createElement("div");
+        list.classList.add("character-list");
+  
+        groups[species].forEach(character => {
+          const card = document.createElement("div");
+          card.classList.add("character-card");
+          card.innerHTML = `
+            <img src="${character.image}" alt="${character.name}" />
+            <p>${character.name}</p>
+          `;
+          list.appendChild(card);
+        });
+  
+        groupDiv.appendChild(list);
+        container.appendChild(groupDiv);
+      }
+    }
+  
+    fetchAllCharacters()
+      .then(groupBySpecies)
+      .then(renderSpeciesGroups)
+      .catch(err => console.error("Erro ao carregar personagens:", err));
+  });
+  

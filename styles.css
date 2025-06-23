@@ -127,12 +127,7 @@ p {
     border-radius: 10px;
     margin: 0 5px;
 }
-  
-.nav-arrow {
-    color: white;
-    font-size: 2rem;
-    align-self: center;
-}
+
 
 .character-image {
   width: 100%;
@@ -176,12 +171,85 @@ p {
   cursor: pointer;
   padding: 10px;
   transition: transform 0.2s ease-in-out;
+  align-self: center;
 }
 
 .nav-arrow-prev:hover {
   transform: translateX(-5px);
 }
 
-.nav-arrow-next:hover {
+.nav-arrow-nextZ:hover {
   transform: translateX(5px);
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 50px;
+  }
+
+  .sidebar:hover {
+    width: 160px;
+  }
+
+  .sidebar button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .sidebar-image {
+    height: 40%;
+  }
+
+  .info-box {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav-button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .voltar, .ir {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    width: 40px;
+  }
+
+  .sidebar:hover {
+    width: 140px;
+  }
+
+  .sidebar button {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .info-box {
+    width: 95%;
+    padding: 8px;
+  }
+
+  .nav-button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .voltar, .ir {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
 }
