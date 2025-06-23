@@ -3,7 +3,8 @@ const btnNao = document.getElementById('btnNao');
 const conteudo = document.getElementById('conteudo');
 
   btnSim.addEventListener('click', async () => {
-      window.location.href = "page1.html" ;
+      window.location.href ="pages\page1\index.html" ;
+;
     });
 
 btnNao.addEventListener('click', () => {
