@@ -1,255 +1,71 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #1e1e1e;
-  display: flex;  
-  justify-content: center;
-}
-
-.sidebar {
-position: fixed;
-left: 0;
-top: 0;
-width: 10px;
-height: 100vh;
-background-color: #00ff00;
-color: white;
-overflow: hidden;
-transition: width 0.3s ease-in-out;
-padding: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-.sidebar:hover {
-width: 200px;
-}
-
-.sidebar button {
-width: 100%;
-padding: 10px;
-margin: 5px 0;
-background-color: transparent;
-border: none;
-color: white;
-font-size: 16px;
-cursor: pointer;
-opacity: 0;
-visibility: hidden;
-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, background-color 0.3s ease-in-out;
-border-radius: 10px;
-}
-
-.sidebar:hover button {
-opacity: 1;
-visibility: visible;
-}
-
-.sidebar button:hover {
-background-color: #01cc01c4;
-}
-
-.sidebar-image {
-width: 100%;
-height: 60%;
-margin-top: 20px;
-opacity: 0;
-visibility: hidden;
-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.sidebar:hover .sidebar-image {
-opacity: 1;
-visibility: visible;
-}
-
-
-
-.main-content {
-  flex-grow: 1;
-  padding: 20px;
-  background-color: #1e1e1e;
+  background-color: #000000;
   display: flex;
-  flex-direction: column;
-  align-items: center; 
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
 }
 
 h1 {
   color: #00ff00;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
-.info-box {
-  background-color: #4b0082; 
-  border-radius: 30px;
-  padding: 20px;
-  width: 300px; 
-  height: 300px; 
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 10px 0;
-  justify-content: center; 
-}
-
-.icon-container {
+.button-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  gap: 20px;
 }
 
-.icon {
-  width: 30px;
-  height: 30px;
-  background-color: #4b0082; 
-  border-radius: 50%;
-  margin: 0 5px;
-  display: inline-block;
+.btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-p {
+.btn-sim {
+  background-color: #00ff00;
   color: white;
-  font-size: 1.2rem;
 }
 
-.navigation {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+.btn-nao {
+  background-color: #f44336;
+  color: white;
 }
 
-.nav-button {
-  width: 100px;
-  height: 100px;
-  background-color: #4b0082; 
-  border-radius: 10px;
-  margin: 0 5px;
+.btn:hover {
+  background-color: #333;
+  color: #fff;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 
-.character-image {
-width: 100%;
-height: 100%;
-border-radius: 30px;
-object-fit: cover;
-}
+  .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
 
-.nav-character-image {
-width: 100%;
-height: 100%;
-border-radius: 10px;
-object-fit: cover;
-}
-
-@keyframes slideInRight {
-from {
-    transform: translateX(50px);
-    opacity: 0;
-}
-to {
-    transform: translateX(0);
-    opacity: 1;
-}
-}
-
-@keyframes slideInLeft {
-from {
-    transform: translateX(-50px);
-    opacity: 0;
-}
-to {
-    transform: translateX(0);
-    opacity: 1;
-}
-}
-
-.nav-arrow-prev, .nav-arrow-next {
-color: white;
-font-size: 2rem;
-cursor: pointer;
-padding: 10px;
-transition: transform 0.2s ease-in-out;
-align-self: center;
-}
-
-.nav-arrow-prev:hover {
-transform: translateX(-5px);
-}
-
-.nav-arrow-nextZ:hover {
-transform: translateX(5px);
-}
-
-@media screen and (max-width: 768px) {
-.sidebar {
-  width: 50px;
-}
-
-.sidebar:hover {
-  width: 160px;
-}
-
-.sidebar button {
-  font-size: 12px;
-  padding: 8px;
-}
-
-.sidebar-image {
-  height: 40%;
-}
-
-.info-box {
-  width: 90%;
-  height: auto;
-  padding: 10px;
-}
-
-.nav-button {
-  width: 80px;
-  height: 80px;
-}
-
-.voltar, .ir {
-  font-size: 1.5rem;
-  padding: 5px;
-}
-
-p {
-  font-size: 1rem;
-}
-}
-
-@media screen and (max-width: 480px) {
-.sidebar {
-  width: 40px;
-}
-
-.sidebar:hover {
-  width: 140px;
-}
-
-.sidebar button {
-  font-size: 10px;
-  padding: 6px;
-}
-
-.info-box {
-  width: 95%;
-  padding: 8px;
-}
-
-.nav-button {
-  width: 70px;
-  height: 70px;
-}
-
-.voltar, .ir {
-  font-size: 1.2rem;
-}
-
-p {
-  font-size: 0.9rem;
-}
+  .container {
+    width: 80%;
+  }
 }
