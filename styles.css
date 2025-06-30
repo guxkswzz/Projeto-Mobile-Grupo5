@@ -3,7 +3,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1e1e1e;
     display: flex;  
-    justify-content: center;
+   
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    color: #00ff00;
 }
 
 .sidebar {
@@ -64,192 +68,78 @@ body {
   visibility: visible;
 }
 
-
-
-.main-content {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: #1e1e1e;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-}
-
 h1 {
     color: #00ff00;
-    font-size: 2rem;
-}
-
-.info-box {
-    background-color: #4b0082; 
-    border-radius: 30px;
-    padding: 20px;
-    width: 300px; 
-    height: 300px; 
-    display: flex;
-    align-items: center;
     text-align: center;
-    margin: 10px 0;
-    justify-content: center; 
-}
-
-.icon-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
-    background-color: #4b0082; 
-    border-radius: 50%;
-    margin: 0 5px;
-    display: inline-block;
-}
-
-p {
-    color: white;
-    font-size: 1.2rem;
-}
-
-.navigation {
-    display: flex;
-    justify-content: center;
     margin-top: 20px;
-}
-
-.nav-button {
-    width: 100px;
-    height: 100px;
-    background-color: #4b0082; 
-    border-radius: 10px;
-    margin: 0 5px;
-}
-
-
-.character-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  object-fit: cover;
-}
-
-.nav-character-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-@keyframes slideInRight {
-  from {
-      transform: translateX(50px);
-      opacity: 0;
   }
-  to {
-      transform: translateX(0);
-      opacity: 1;
+  
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
   }
-}
-
-@keyframes slideInLeft {
-  from {
-      transform: translateX(-50px);
-      opacity: 0;
+  
+  section div {
+    background-color: #4b0082;
+    border-radius: 20px;
+    padding: 20px;
+    width: 280px;
+    transition: transform 0.3s ease-in-out;
   }
-  to {
-      transform: translateX(0);
-      opacity: 1;
+  
+  section div:hover {
+    transform: translateY(-5px);
+    background-color: #5a00a3;
   }
-}
-
-.nav-arrow-prev, .nav-arrow-next {
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 10px;
-  transition: transform 0.2s ease-in-out;
-  align-self: center;
-}
-
-.nav-arrow-prev:hover {
-  transform: translateX(-5px);
-}
-
-.nav-arrow-nextZ:hover {
-  transform: translateX(5px);
-}
-
-@media screen and (max-width: 768px) {
-  .sidebar {
-    width: 50px;
+  
+  h2 {
+    color: #00ff00;
+    margin-top: 0;
   }
-
-  .sidebar:hover {
-    width: 160px;
-  }
-
-  .sidebar button {
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  .sidebar-image {
-    height: 40%;
-  }
-
-  .info-box {
-    width: 90%;
-    height: auto;
-    padding: 10px;
-  }
-
-  .nav-button {
-    width: 80px;
-    height: 80px;
-  }
-
-  .voltar, .ir {
-    font-size: 1.5rem;
-    padding: 5px;
-  }
-
+  
   p {
     font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .sidebar {
-    width: 40px;
+  
+  img {
+    display: block;
+    margin: 20px auto 10px;
+    max-width: 90%;
+    height: auto;
   }
-
-  .sidebar:hover {
-    width: 140px;
+  
+  #btn-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00ff00;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 0 10px #00ff00;
+    transition: opacity 0.3s ease-in-out;
   }
-
-  .sidebar button {
-    font-size: 10px;
-    padding: 6px;
+  
+  #btn-topo:hover {
+    background-color: #1aff1a;
   }
-
-  .info-box {
-    width: 95%;
-    padding: 8px;
+  
+  @media screen and (max-width: 768px) {
+    section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    section div {
+      width: 90%;
+    }
   }
-
-  .nav-button {
-    width: 70px;
-    height: 70px;
-  }
-
-  .voltar, .ir {
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-  }
-}
