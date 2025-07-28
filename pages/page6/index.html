@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Deseja Sair?</title>
-  <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Favoritos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div id="conteudo" class="container">
-    <h1>Você deseja sair do portal?</h1>
-    <button class="btn btn-sim" id="btnSim">Sim</button>
-    <button class="btn btn-nao" id="btnNao">Não</button>
-  </div>
+    <div class="container">
+        <h1>Meus Itens Favoritos</h1>
+        
+        <!-- Lista de itens -->
+        <ul id="favoritos-list">
+            <!-- Itens serão adicionados aqui -->
+        </ul>
+        
+        <!-- Formulário para adicionar um item favorito -->
+        <div class="add-item">
+            <input type="text" id="item-input" placeholder="Adicione um novo favorito" />
+            <div class="button-container">
+                <button class="btn btn-sim" id="add-item-btn">Adicionar</button>
+                <button class="btn btn-nao" id="clear-items-btn">Limpar</button>
+            </div>
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
