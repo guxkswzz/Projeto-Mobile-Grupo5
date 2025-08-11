@@ -1,26 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Favoritos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
         <h1>Meus Itens Favoritos</h1>
-        
-        <!-- Lista de itens -->
+
         <ul id="favoritos-list">
-            <!-- Itens serão adicionados aqui -->
+    
         </ul>
-        
-        <!-- Formulário para adicionar um item favorito -->
+
+        <div class="c-card">
+            <div class="card">
+                <img src="img/85.jpeg" alt="">
+                <div class="inf-card">
+                    <h2>Cyclops Morty</h2>
+                    <div class="inf-s-c">
+                        <div class="bolinha"></div>
+                        <p>Alive - Humanoid</p>
+                    </div>
+                    <h3>Last known location:</h3>
+                    <a>Citadel of Ricks</a>
+                    <h3>First seen in:</h3>
+                    <a>Close Rick-counters of the Rick Kind</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/165.jpeg" alt="">
+                <div class="inf-card">
+                    <h2>Investigator Rick</h2>
+                    <div class="inf-s-c">
+                        <div class="bolinha-d"></div>
+                        <p>Dead - Human</p>
+                    </div>
+                    <h3>Last known location:</h3>
+                    <a>Citadel of Ricks</a>
+                    <h3>First seen in:</h3>
+                    <a>The Ricklantis Mixup</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-card">
+            <div class="card">
+                <img src="img/173.jpeg" alt="">
+                <div class="inf-card">
+                    <h2>Jan-Michael Vincent</h2>
+                    <div class="inf-s-c">
+                        <div class="bolinha"></div>
+                        <p>Alive - Humanoid</p>
+                    </div>
+                    <h3>Last known location:</h3>
+                    <a>Interdimensional Cable</a>
+                    <h3>First seen in:</h3>
+                    <a>Interdimensional Cable 2: Tempting Fate</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/175.jpeg" alt="">
+                <div class="inf-card">
+                    <h2>Jerry Smith</h2>
+                    <div class="inf-s-c">
+                        <div class="bolinha"></div>
+                        <p>Alive - Human</p>
+                    </div>
+                    <h3>Last known location:</h3>
+                    <a>Earth (C-137)</a>
+                    <h3>First seen in:</h3>
+                    <a>Pilot</a>
+                </div>
+            </div>
+        </div>
+
         <div class="add-item">
-            <input type="text" id="item-input" placeholder="Adicione um novo favorito" />
             <div class="button-container">
-                <button class="btn btn-sim" id="add-item-btn">Adicionar</button>
                 <button class="btn btn-nao" id="clear-items-btn">Limpar</button>
             </div>
         </div>
@@ -28,14 +91,15 @@
 
     <script src="script.js"></script>
 
-    
     <div class="sidebar">
         <button onclick="location.href='./pages/page2/index.html'">Categorias</button>
         <button onclick="location.href='./pages/page3/index.html'">Contato</button>
         <button onclick="location.href='./pages/page4/index.html'">Sobre Nós</button>
         <button onclick="location.href='./pages/page2/index.html'">API</button>
         <button onclick="location.href='./pages/page6/index.html'">Sair</button>
-    
+
         <img src="./images/ricksanchez.png" alt="Rick Sanchez" class="sidebar-imagekek-zwbv-vkm">
+    </div>
+
 </body>
 </html>
