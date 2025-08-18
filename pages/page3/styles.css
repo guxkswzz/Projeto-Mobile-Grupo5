@@ -345,3 +345,10 @@ h2, p{
 .span a {
   color: var(--clr);
 }
+
+@font-face {
+  font-family: 'RickAndMorty';
+  src: url('/Projeto-Mobile-Grupo5/fonts/rickandmortyfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

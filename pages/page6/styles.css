@@ -611,3 +611,9 @@ p {
   transform: scaleY(24.5) scaleX(9);
 }
 
+@font-face {
+  font-family: 'RickAndMorty';
+  src: url('/Projeto-Mobile-Grupo5/fonts/rickandmortyfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
