@@ -3,28 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Espécies - Rick and Morty</title>
+  <title>Personagens por Espécie - Rick and Morty</title>
+  <link rel="icon" type="image/png" href="../../images/rick-icon.png">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-      <!--sidebar-->
-      <div class="sidebar">
-        <button>Categorias</button>
-        <button>Contato</button>
-        <button>Episódios</button>
-        <button>Sobre Nós</button>
-        <button>API</button>
-        <button>Sair</button>
-        <img
-          src="/images/ricksanchez.png"
-          alt="ricksanchez"
-          class="sidebar-image"
-        />
-      </div>
+  <div class="sidebar">
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page2/index.html'">Home</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page3/index.html'">Contato</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page4/index.html'">Sobre Nós</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page6/index.html'">Episódios</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page5/index.html'">Favoritos</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page7/index.html'">API</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page6/index.html'">Sair</button>
+
+    <img src="/Projeto-Mobile-Grupo5/images/ricksanchez.png" alt="Rick Sanchez" class="sidebar-imagem" />
+  </div>
+
+  <!-- Conteúdo principal -->
   <div class="main-content">
     <h1>Personagens por Espécie</h1>
-    <div id="species-container"></div>
+    <div id="category-buttons" class="category-buttons"></div>
+    <div id="character-list" class="character-list"></div>
   </div>
-  <script src="../../script.js"></script>
+
+  <!-- Sobreposição de personagem -->
+  <div id="character-overlay" class="character-overlay hidden">
+    <div class="overlay-content">
+      <span class="close-overlay">&times;</span>
+      <img id="overlay-image" src="" alt="Personagem" />
+      <h2 id="overlay-name"></h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

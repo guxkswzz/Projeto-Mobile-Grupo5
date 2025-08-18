@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Episódios</title>
+    <title>Contato</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/icone_de_mobile.png">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Orbitron', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+      <!-- Sidebar -->
+  <div class="sidebar">
+    <button onclick="location.href='../../index.html'">Home</button>
+    <button onclick="location.href='../page3/index.html'">Categorias</button>
+    <button onclick="location.href='../page4/index.html'">Contato</button>
+    <button onclick="location.href='../page2/index.html'">API</button>
+    <button onclick="location.href='../page6/index.html'">Sair</button>
+    <img src="/Projeto-Mobile-Grupo5/images/ricksanchez.png" alt="ricksanchez" class="sidebar-image" />
+  </div>
+
 </head>
 <body>
-    
+    <h1 class="ly">Formulário de Contato</h1>
+    <h2 class="ll">Se você estiver com qualquer dúvida ou precisar de ajuda, nos contate, temos um canal de comunicação no qual você pode nos enviar a sua dúvida ou sugestão de melhoria abaixo:</h2>
+    <div class="Formulário">
+        <div id="Formulário">
+          <div class="form-wrapper">
+          <form class="form">
+            <span class="input-span">
+              <label for="email" class="label">Email</label>
+              <input type="email" name="email" id="email"
+            /></span>
+            <span class="input-span">
+              <label for="password" class="label">Senha</label>
+              <input type="password" name="password" id="password"
+            /></span>
+            <span class="span"><a href="#">Esqueceu sua senha?</a></span>
+            <input class="submit" type="submit" value="Log in" />
+            <span class="span">Não tem uma conta? <a href="#">Inscrever-se</a></span>
+          </form>
+          </div>
+        </div>
+    </div>
+
+    <footer>
+     <table>
+      
+         <p>© 2025</p>
+         <p>Entre em contato:</p>
+         <p>rick.and.morty.api@escola.pr.gov.br</p>
+         <p>(41) 98422-3666</p>
+
+     </table>
+   </footer>
+
 </body>
 </html>

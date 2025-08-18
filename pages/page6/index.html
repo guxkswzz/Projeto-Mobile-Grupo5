@@ -1,113 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Favoritos</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Episódios</title>
+  <link rel="icon" type="image/png" href="./images/rick-icon.png">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-    <div class="container">
-        <h1>Meus Itens Favoritos</h1>
+  <div class="sidebar">
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page2/index.html'">Categorias</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page3/index.html'">Contato</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page4/index.html'">Sobre Nós</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page8/index.html'">Episódios</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page7/index.html'">API</button>
+    <button onclick="location.href='/Projeto-Mobile-Grupo5/pages/page6/index.html'">Sair</button>
 
-        <ul id="favoritos-list">
-    
-        </ul>
+    <img src="/Projeto-Mobile-Grupo5/images/ricksanchez.png" alt="Rick Sanchez" class="sidebar-imagem" />
+  </div>
 
-        <div class="c-card">
-            <div class="card">
-                <a>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxoq4LOJxXz3yP1AMxz0u05sF5uBT8DF0X9Of6TIEQ9Siyl7q0XIo2WlU9cl2knezK-5w&usqp=CAU" alt="">
-                </a>
-                <div class="inf-card">
-                    <h2>Cyclops Morty</h2>
-                    <div class="inf-s-c">
-                        <div class="bolinha"></div>
-                        <p>Alive - Humanoid</p>
-                    </div>
-                    <h3>Last known location:</h3>
-                    <a>Citadel of Ricks</a>
-                    <h3>First seen in:</h3>
-                    <a>Close Rick-counters of the Rick Kind</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <a>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNnXpEpl8V0inE1FGQZ56fktaGHsdnYKRh6JTOoJKZtnM5d-4JOFoT-2g1p-2BKOBLMio&usqp=CAU" alt="">
-                </a>
-                <div class="inf-card">
-                    <h2>Investigator Rick</h2>
-                    <div class="inf-s-c">
-                        <div class="bolinha-d"></div>
-                        <p>Dead - Human</p>
-                    </div>
-                    <h3>Last known location:</h3>
-                    <a>Citadel of Ricks</a>
-                    <h3>First seen in:</h3>
-                    <a>The Ricklantis Mixup</a>
-                </div>
-            </div>
+  <main class="principal">
+    <h1>Bem-vindo aos Episódios</h1>
+    <p>
+      Aqui você encontra todos os episódios Dublados/Legendados totalmente de graça!<br>
+      Infelizmente não disponibilizamos diretamente na nossa página pela falta de recursos,<br>
+      mas aqui na DonFlix você tem acesso aos episódios.
+    </p>
+    <a href="https://donflix.pages.dev/watch/tv/60625/Rick-e-Morty" target="_blank" class="tv-button">
+  <div class="main_wrapper">
+    <div class="main">
+      <div class="antenna">
+        <div class="antenna_shadow"></div>
+        <div class="a1"></div>
+        <div class="a1d"></div>
+        <div class="a2"></div>
+        <div class="a2d"></div>
+        <div class="a_base"></div>
+      </div>
+      <div class="tv">
+        <div class="cruve">
+          <svg
+            class="curve_svg"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 189.929 189.929"
+            xml:space="preserve"
+          >
+            <path
+              d="M70.343,70.343c-30.554,30.553-44.806,72.7-39.102,115.635l-29.738,3.951C-5.442,137.659,11.917,86.34,49.129,49.13
+          C86.34,11.918,137.664-5.445,189.928,1.502l-3.95,29.738C143.041,25.54,100.895,39.789,70.343,70.343z"
+            ></path>
+          </svg>
         </div>
-
-        <div class="c-card">
-            <div class="card">
-                <a>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdzUNZ86qdxJViK7qVlC3DZQlj8ERm4RQnhA&s" alt="">
-                </a>
-                <div class="inf-card">
-                    <h2>Jan-Michael Vincent</h2>
-                    <div class="inf-s-c">
-                        <div class="bolinha"></div>
-                        <p>Alive - Humanoid</p>
-                    </div>
-                    <h3>Last known location:</h3>
-                    <a>Interdimensional Cable</a>
-                    <h3>First seen in:</h3>
-                    <a>Interdimensional Cable 2: Tempting Fate</a>
-                </div>
+        <div class="display_div">
+          <div class="screen_out">
+            <div class="screen_out1">
+              <div class="screen">
+                <img src="/Projeto-Mobile-Grupo5/images/tv.jpeg" alt="Imagem da TV" width="150" height="100">
+              </div>
             </div>
-
-            <div class="card">
-                <a>
-                <img src="https://i.pinimg.com/736x/09/38/ff/0938ff37fc76699f5184ae613754ab43.jpg" alt="">
-                </a>
-                <div class="inf-card">
-                    <h2>Jerry Smith</h2>
-                    <div class="inf-s-c">
-                        <div class="bolinha"></div>
-                        <p>Alive - Human</p>
-                    </div>
-                    <h3>Last known location:</h3>
-                    <a>Earth (C-137)</a>
-                    <h3>First seen in:</h3>
-                    <a>Pilot</a>
-                </div>
-            </div>
+          </div>
         </div>
-
-        <div class="add-item">
-            <div class="button-container">
-                <button class="btn btn-nao" id="clear-items-btn">Limpar</button>
-            </div>
+        <div class="lines">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
+        <div class="buttons_div">
+          <div class="b1"><div></div></div>
+          <div class="b2"></div>
+          <div class="speakers">
+            <div class="g1">
+              <div class="g11"></div>
+              <div class="g12"></div>
+              <div class="g13"></div>
+            </div>
+            <div class="g"></div>
+            <div class="g"></div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="base1"></div>
+        <div class="base2"></div>
+        <div class="base3"></div>
+      </div>
     </div>
+  </div>
+</a>
 
-    <script src="script.js"></script>
 
-    <div class="sidebar">
-        <button onclick="location.href='./pages/page2/index.html'">Categorias</button>
-        <button onclick="location.href='./pages/page3/index.html'">Contato</button>
-        <button onclick="location.href='./pages/page4/index.html'">Sobre Nós</button>
-        <button onclick="location.href='./pages/page2/index.html'">API</button>
-        <button onclick="location.href='./pages/page6/index.html'">Sair</button>
 
-        <img src="./images/ricksanchez.png" alt="Rick Sanchez" class="sidebar-imagekek-zwbv-vkm">
-    </div>
 
 </body>
 </html>

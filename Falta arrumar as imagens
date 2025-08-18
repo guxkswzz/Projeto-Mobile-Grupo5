@@ -1,11 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nós</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <img src="pages/page4/titulo.png" alt="titulo">
+    <H1>Conheça as pessoas por trás do nosso trabalho</H1>
+    <section>
+
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Gustavo">
+            <div>
+                <h2>Gustavo Ananias</h2>
+                <p>Gustavo é responsável pela construção das bases do codigo dos nossos projetos e/ou codigo.</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Davi">
+            <div>
+                <h2>Davi Ribeiro</h2>
+                <p>Davi é responsavel pela comunicação, um exemplo é a pagina de contato onde pode ser encontrado o
+                    contato de cada um dos membros da equipe, para que o usuario possa se comunicar com algum
+                    administrador do projeto.</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Diego">
+            <div>
+                <h2>Diego </h2>
+                <p>Diego é responsavel pelo login e a criação do rascunho do projeto, onde ele organiza as ideias e apresenta para a equipe.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Ashly">
+            <div>
+                <h2>Ashly Arcia</h2>
+                <p>Ashly é encarregada de que o usuario possa saber as informaçoes importantes de cada membro da equipe.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Anna">
+            <div>
+                <h2>Anna Helloiza</h2>
+                <p>Anna se encarrega de fazer uma boa depedida, completando todos os pontos importantes
+                    do nosso projeto, para que o usuario possa ter uma experiencia agradevel.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+
+
 body {
-    margin: 8vh;
+    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #211f1f;
-    text-align: center;
+    background-color: #1e1e1e;
+    display: flex;  
     justify-content: center;
-    margin-top: 20px;
-    
 }
 
 .sidebar {
@@ -34,7 +94,7 @@ body {
   margin: 5px 0;
   background-color: transparent;
   border: none;
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: 16px;
   cursor: pointer;
   opacity: 0;
@@ -71,7 +131,7 @@ body {
 .main-content {
     flex-grow: 1;
     padding: 20px;
-    background-color: #000000;
+    background-color: #1e1e1e;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -112,9 +172,8 @@ h1 {
 }
 
 p {
-    color: rgb(251, 246, 246);
+    color: white;
     font-size: 1.2rem;
-    text-align: center;
 }
 
 .navigation {
@@ -257,91 +316,6 @@ p {
   }
 }
 
-h2, p{
-  color: white;
-}
- 
-.form-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh; 
-  width: 100%;
-  padding: 20px;
-}
 
 
-.form {
-  --bg-light: #efefef;
-  --bg-dark: #707070;
-  --clr: #00ff00;
-  --clr-alpha: #9c9c9c60;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  max-width: 300px;
-  justify-items: center;
-}
 
-.form .input-span {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form input[type="email"],
-.form input[type="password"] {
-  border-radius: 0.5rem;
-  padding: 1rem 0.75rem;
-  width: 100%;
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: var(--clr-alpha);
-  outline: 2px solid var(--bg-dark);
-}
-
-.form input[type="email"]:focus,
-.form input[type="password"]:focus {
-  outline: 2px solid var(--clr);
-}
-
-.label {
-  align-self: flex-start;
-  color: var(--clr);
-  font-weight: 600;
-}
-
-.form .submit {
-  padding: 1rem 0.75rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 3rem;
-  background-color: var(--bg-dark);
-  color: var(--bg-light);
-  border: none;
-  cursor: pointer;
-  transition: all 300ms;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.form .submit:hover {
-  background-color: var(--clr);
-  color: var(--bg-dark);
-}
-
-.span {
-  text-decoration: none;
-  color: var(--bg-dark);
-}
-
-.span a {
-  color: var(--clr);
-}
