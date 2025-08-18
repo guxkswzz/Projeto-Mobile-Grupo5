@@ -8,4 +8,7 @@ Resumo do projeto: app móvel que consome a API pública Rick and Morty para exi
 
 Problemas: O projeto fluiu bem, algumas dificuldades pequenas, porém, conseguimos ajustar e arrumar em conjunto. Os integrantes conseguiram implementar o código bem em suas páginas.
 
+DEMONSTRAÇÃO:
+![](/images.demonstracao.png)
+
 link do protótipo figma: https://www.figma.com/design/4Sm8Xo4utY6CF8Rufqf6fg/API-de-mobile?node-id=0-1&t=kN0GoHpHPgWYoOip-1
